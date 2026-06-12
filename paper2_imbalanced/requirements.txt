@@ -1,0 +1,23 @@
+# TabOversample — Experiment Dependencies
+# Install:  pip install -r requirements.txt
+
+# Core
+numpy
+pandas
+scipy
+scikit-learn
+torch
+tqdm
+
+# Downstream regressors
+catboost
+xgboost
+
+# Generative baselines (optional — graceful fallback if missing)
+ctgan
+
+# Reporting
+tabulate
+
+# Data access
+openml

@@ -1,0 +1,29 @@
+# Local experiment outputs (never commit)
+paper2_imbalanced/results/
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Accidental manuscript or paper artifacts
+*.tex
+*.bib
+*.pdf
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+1_Manuscript/
+3_Others/
