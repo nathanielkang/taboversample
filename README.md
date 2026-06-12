@@ -86,8 +86,6 @@ python run_experiments.py --regressor catboost
 
 **Included:** TabOversample, in-repo baselines, metrics, and configuration needed to rerun the experiments described in the paper.
 
-**Not included:** Precomputed result tables, manuscript sources, or submission materials. Those stay in the authors' local research tree.
-
 ## Citation
 
 If you use this code, please cite:
