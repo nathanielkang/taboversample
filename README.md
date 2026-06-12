@@ -82,10 +82,6 @@ python run_experiments.py --regressor catboost
 | `taboversample/run_experiments.py` | End-to-end benchmark driver |
 | `figures/fig1.jpg`, `figures/fig2.jpg` | Paper Figures 1–2 (motivation and pipeline) |
 
-## Scope
-
-**Included:** TabOversample, in-repo baselines, metrics, and configuration needed to rerun the experiments described in the paper.
-
 ## Citation
 
 If you use this code, please cite:
