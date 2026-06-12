@@ -1,5 +1,5 @@
 # Local experiment outputs (never commit)
-paper2_imbalanced/results/
+taboversample/results/
 results/
 
 # Python

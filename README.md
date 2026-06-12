@@ -2,7 +2,7 @@
 
 **TabOversample** is a conditional diffusion framework for **imbalanced tabular regression**: it learns to generate high-fidelity synthetic tabular rows for underrepresented target regions, then uses those rows to train a standard downstream regressor (CatBoost, XGBoost, or MLP).
 
-This repository is the **reference implementation** accompanying the UAI 2026 paper *Conditional Diffusion Models for Imbalanced Tabular Regression*. It contains **source code only**. Benchmark datasets are fetched at runtime via OpenML and scikit-learn. Running the scripts writes CSV and LaTeX summaries under `paper2_imbalanced/results/` on your machine (not tracked in git).
+This repository is the **reference implementation** accompanying the UAI 2026 paper *Conditional Diffusion Models for Imbalanced Tabular Regression*. It contains **source code only**. Benchmark datasets are fetched at runtime via OpenML and scikit-learn. Running the scripts writes CSV and LaTeX summaries under `taboversample/results/` on your machine (not tracked in git).
 
 **Repository:** https://github.com/nathanielkang/taboversample
 
@@ -38,7 +38,7 @@ Comparison on the Medical Insurance dataset (BMI vs. charges). The shaded band m
 python -m venv .venv
 # Windows:  .venv\Scripts\activate
 # Linux/macOS:  source .venv/bin/activate
-pip install -r paper2_imbalanced/requirements.txt
+pip install -r taboversample/requirements.txt
 ```
 
 PyTorch with CUDA is recommended for diffusion training but not required for a quick CPU smoke run with reduced epochs.
@@ -48,7 +48,7 @@ PyTorch with CUDA is recommended for diffusion training but not required for a q
 From the repository root:
 
 ```bash
-cd paper2_imbalanced
+cd taboversample
 python run_experiments.py --dataset abalone --method tabover --seeds 1 --epochs 50
 ```
 
@@ -57,7 +57,7 @@ This loads Abalone, runs TabOversample with one seed, and writes outputs locally
 ### Full benchmark
 
 ```bash
-cd paper2_imbalanced
+cd taboversample
 python run_experiments.py
 ```
 
@@ -73,13 +73,13 @@ python run_experiments.py --regressor catboost
 
 | Path | Role |
 |------|------|
-| `paper2_imbalanced/tabover.py` | TabOversample training, generation, and DSE filtering |
-| `paper2_imbalanced/diffusion.py` | Gaussian + multinomial tabular diffusion (TabDDPM-style) |
-| `paper2_imbalanced/relevance.py` | Box-plot and density-based relevance functions |
-| `paper2_imbalanced/baselines.py` | SMOTER, SMOGN, RandomOS, TabDDPM-Cond, and related baselines |
-| `paper2_imbalanced/datasets.py` | OpenML / sklearn dataset loaders |
-| `paper2_imbalanced/metrics.py` | SERA, RMSE, RMSE\_rare |
-| `paper2_imbalanced/run_experiments.py` | End-to-end benchmark driver |
+| `taboversample/tabover.py` | TabOversample training, generation, and DSE filtering |
+| `taboversample/diffusion.py` | Gaussian + multinomial tabular diffusion (TabDDPM-style) |
+| `taboversample/relevance.py` | Box-plot and density-based relevance functions |
+| `taboversample/baselines.py` | SMOTER, SMOGN, RandomOS, TabDDPM-Cond, and related baselines |
+| `taboversample/datasets.py` | OpenML / sklearn dataset loaders |
+| `taboversample/metrics.py` | SERA, RMSE, RMSE\_rare |
+| `taboversample/run_experiments.py` | End-to-end benchmark driver |
 | `figures/fig1.jpg`, `figures/fig2.jpg` | Paper Figures 1–2 (motivation and pipeline) |
 
 ## Scope

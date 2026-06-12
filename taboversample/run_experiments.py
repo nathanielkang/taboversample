@@ -1,5 +1,5 @@
 """
-run_experiments.py - Main experiment runner for Paper 2: TabOversample.
+run_experiments.py - Main experiment runner for TabOversample benchmarks.
 
 Orchestrates the full evaluation pipeline:
     For each dataset × oversampling method × random seed:
